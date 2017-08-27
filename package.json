@@ -1,0 +1,20 @@
+{
+  "name": "particle-engine",
+  "version": "1.0.0",
+  "description": "Simple and flexible particle physics engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jwarren.carroll@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.2",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.0",
+    "st": "^0.5.4",
+    "yargs": "^3.15.0"
+  }
+}

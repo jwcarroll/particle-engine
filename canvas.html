@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Particle System</title>
+        <style>
+            /*Some basic CSS*/
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+    
+            .particle-engine{
+                float: left;
+            }
+            
+            /*To remove the scrollers*/
+            #world {
+                position: absolute;
+            }
+        </style>
+    </head>
+    
+    <body ng-app="particle-engine">
+        <canvas id="world1"></canvas>
+        
+        <script type="text/javascript">
+            
+            var canvas = document.getElementById('world1');
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+            
+            var context = canvas.getContext('2d');
+            
+            var i = 0;
+            
+            setInterval(function(){
+            
+                context.fillStyle = "white";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                context.fillStyle = "black";                
+            
+                context.beginPath();
+                context.arc(i*10, i*10, 10, 0, Math.PI * 2, true);
+                context.closePath();
+                context.fill();
+                
+                i = i + 1;
+                
+            }, 50);
+          
+        </script>
+    </body>
+
+</html>
